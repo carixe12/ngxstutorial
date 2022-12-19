@@ -1,0 +1,8 @@
+<div class="right" *ngIf="try$">
+  <h3>Trys</h3>
+  <ul>
+    <li (click)="delTry(try.name)" *ngFor="let try of try$ | async">
+      <a [href]="try.url" target="_blank">{{ try.name }}</a>
+    </li>
+  </ul>
+</div>
